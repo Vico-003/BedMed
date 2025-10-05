@@ -1,0 +1,102 @@
+/* ----- Structure générale ----- */
+body {
+    margin: 0;
+    background: linear-gradient(to right, #f1f8ff, #d7eaff);
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* ----- En-tête avec logos ----- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0d6efd;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    height: 100px;
+    width: 100%;
+}
+
+.header-logo {
+    height: 60px;
+    width: auto;
+}
+
+.username {
+    flex-grow: 1;
+    text-align: center;
+    animation: fadeInDown 1s ease-out;
+    color: #0d6efd;
+}
+
+/* ----- Boutons principaux ----- */
+.main-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    flex-grow: 1;
+}
+
+.btn-main {
+    background-color: #ffffff;
+    color: white;
+    padding: 40px;
+    margin: 0;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert {
+    border: solid 3px #fd0d0d;
+}
+
+.bed {
+    border: solid 3px #3586ff;
+}
+
+.tele {
+    border: solid 3px #28c700;
+}
+
+#btn-alert {
+    width: 250px;
+    height: 250px;
+}
+
+#btn-bed {
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+}
+
+#btn-abonnement {
+    width: 150px;
+    height: 150px;
+}
+
+/* ----- Animation d’entrée ----- */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

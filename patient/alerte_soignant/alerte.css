@@ -1,0 +1,157 @@
+/* ----- Général ----- */ 
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #f0f8ff, #ffffff);
+    min-height: 100vh;
+}
+
+header {
+    position: relative; /* permet de positionner l’icône en absolu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9f3ff;
+    padding: 10px 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    height: 100px;
+    margin-left: 220px; /* Décalage identique à la sidebar */
+}
+
+.username {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0d6efd;
+    animation: fadeInDown 1s ease-out;
+}
+
+.logout-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    right: 40px;
+    top: 0;
+}
+
+.logout-icon {
+    font-size: 2.5rem;
+    color: #000000;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.logout-icon:hover {
+    transform: scale(1.2);
+    color: #000000;
+}
+
+/* ----- Sidebar ----- */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.sidebar img.logo {
+    width: 100px;
+}
+
+.sidebar .icon-btn {
+    background-color: #ffffff;
+    border-radius: 20%;
+    width: 120px;
+    height: 120px;
+    margin: 20px 0;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar .icon-btn img {
+    width: 90px;
+}
+
+.sidebar .chu-logo {
+    margin-top: auto;
+    width: 100px;
+}
+
+/* ----- Bordures des icônes ----- */
+.lit {
+    border: solid 3px #3586ff;
+}
+
+.maison {
+    border: solid 3px #ff00aa;
+}
+
+.tele {
+    border: solid 3px #28c700;
+}
+
+.alerte {
+    border: solid 3px #fd0d0d;
+}
+
+.sidebar .icon-btn img {
+    width: 90px;
+}
+
+.sidebar .chu-logo {
+    margin-top: auto;
+    width: 100px;
+}
+/* ----- Animation d’entrée ----- */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 40px;
+    min-height: calc(100vh - 100px);
+    background-color: #f7fbff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alerte-container {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.alerte-container h2 {
+    text-align: center;
+    color: #0d6efd;
+    margin-bottom: 20px;
+}
+
+.alerte-container .form-label {
+    font-weight: bold;
+    color: #333;
+}
+

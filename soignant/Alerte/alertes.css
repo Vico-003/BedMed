@@ -1,0 +1,118 @@
+/* ----- Général ----- */
+body {
+    background: linear-gradient(to bottom right, #eef5ff, #ffffff);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    color: #0d6efd;
+    margin-bottom: 50px;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* ----- Carte d'alerte ----- */
+.alerte-card {
+    border-left: 6px solid #dc3545;
+    background: #ffffff;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    animation: fadeIn 0.6s ease;
+    transition: transform 0.2s ease;
+}
+
+.alerte-card:hover {
+    transform: scale(1.01);
+}
+
+.card-header {
+    background-color: #fce4e6;
+    color: #b02a37;
+    font-weight: 600;
+    padding: 18px 24px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-header span {
+    font-size: 0.95rem;
+    color: #444;
+    margin-left: 10px;
+}
+
+.card-body {
+    padding: 24px;
+    font-size: 1.05rem;
+    color: #333;
+    background-color: #fdfdfd;
+    line-height: 1.6;
+}
+
+/* ----- Bouton suppression ----- */
+.btn-delete {
+    background: transparent;
+    border: none;
+    color: #dc3545;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 6px 12px;
+    transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+    color: #a80000;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+/* ----- Messages "Aucune alerte" ----- */
+.alert {
+    font-size: 1.1rem;
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+/* ----- Animation douce ----- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-delete {
+        align-self: flex-end;
+        margin-top: 10px;
+    }
+}
